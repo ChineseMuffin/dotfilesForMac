@@ -1,0 +1,7 @@
+cask "google-chrome"
+cask "google-japanese-ime"
+cask "iterm2"
+cask "keyboard-cleaner"
+cask "visual-studio-code"
+cask "zoom"
+cask "gimp"

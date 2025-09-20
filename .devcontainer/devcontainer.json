@@ -1,0 +1,12 @@
+{
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "workbench.colorTheme": "Visual Studio Dark"//,
+        },
+        "extensions": [
+          "gxl.git-graph-3"
+        ]
+      }
+    }
+}
