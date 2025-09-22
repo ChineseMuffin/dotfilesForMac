@@ -23,6 +23,12 @@ macOSを初期設定するためのリポジトリです。
 - visual-studio-code
 - zoom
 
+## Visual Studio Code
+- Git Graph
+    - mhutchie.git-graph
+- Python
+    - ms-python.python
+
 ## 直接インストール
 - CLIP STUDIO
 - ワコムタブレットユーティリティ
