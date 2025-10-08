@@ -1,0 +1,3 @@
+mhutchie.git-graph
+ms-python.python
+# cat install/vscode/list-extensions | xargs -L 1 -E '#' code --install-extension
