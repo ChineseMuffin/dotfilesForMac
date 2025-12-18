@@ -25,7 +25,7 @@ macOSを初期設定するためのリポジトリです。
 
 ## Visual Studio Code
 - Git Graph
-    - gxl.git-graph-3
+    - mhutchie.git-graph
 - Python
     - ms-python.python
 
