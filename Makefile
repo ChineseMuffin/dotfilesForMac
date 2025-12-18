@@ -2,6 +2,8 @@ DOTFILES_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 HOME_BREW_PREFIX := /home/linuxbrew/.linuxbrew
 PATH := $(HOME_BREW_PREFIX)/bin:$(DOTFILES_DIR)/bin:$(PATH)
 
+all: brew-formulae brew-cask vscode
+
 brew:
 	is-executable brew || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash \
 	&& brew --version \
@@ -13,6 +15,9 @@ brew-formulae: brew
 
 brew-cask: brew
 	brew bundle --verbose --file install/Caskfile
+
+vscode: brew-cask
+	cat install/vscode/list-extensions | xargs -L 1 -E 'EOF' code --install-extension
 
 reset:
 	test -z "$$(brew list --formulae)" || brew uninstall --ignore-dependencies $$(brew list --formulae)
