@@ -1,4 +1,4 @@
-# dotfiles　for Mac
+# dotfiles for Mac
 macOSを初期設定するためのリポジトリです。
 
 参考にしたリポジトリ https://github.com/webpro/dotfiles/tree/main
