@@ -4,5 +4,5 @@ EOF
 
 ## Usage
 ```
-cat install/vscode/list-extensions | xargs -L 1 -E 'EOF' code --install-extension
+xargs -a install/vscode/list-extensions -L 1 -E 'EOF' code --install-extension
 ```

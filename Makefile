@@ -1,8 +1,13 @@
 DOTFILES_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 HOME_BREW_PREFIX := /home/linuxbrew/.linuxbrew
 PATH := $(HOME_BREW_PREFIX)/bin:$(DOTFILES_DIR)/bin:$(PATH)
+OS := $(shell bin/is-supported bin/is-macos macos $(shell bin/is-supported bin/is-ubuntu ubuntu linux))
 
-all: brew-formulae brew-cask vscode
+all: $(OS)
+
+macos: brew-formulae brew-cask vscode
+
+ubuntu: brew-formulae
 
 brew:
 	is-executable brew || curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash \

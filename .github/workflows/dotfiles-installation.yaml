@@ -1,0 +1,19 @@
+name: Dotfiles Installation
+
+on:
+  push:
+
+jobs:
+  install:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-26, ubuntu-latest]
+    
+    steps:
+      - name: Clone this repository
+        uses: actions/checkout@v6
+      
+      - name: Install using Makefile
+        run: |
+          make
