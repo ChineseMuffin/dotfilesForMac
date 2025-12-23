@@ -1,7 +1,7 @@
 DOTFILES_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 HOME_BREW_PREFIX := /home/linuxbrew/.linuxbrew
 PATH := $(HOME_BREW_PREFIX)/bin:$(DOTFILES_DIR)/bin:$(PATH)
-OS := is-supported is-macos macos $(is-supported is-ubuntu ubuntu linux)
+OS := $(shell bin/is-supported bin/is-macos macos $(shell bin/is-supported bin/is-ubuntu ubuntu linux))
 
 all: $(OS)
 
