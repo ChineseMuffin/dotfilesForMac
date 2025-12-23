@@ -4,6 +4,14 @@ macOSを初期設定するためのリポジトリです。
 参考にしたリポジトリ https://github.com/webpro/dotfiles/tree/main
 
 ## 使い方
+### Xcode Command Line Toolsのインストール
+(git makeを含む)
+```
+sudo softwareupdate -i -a
+xcode-select --install
+```
+
+### リポジトリのクローン
 ```
 bash -c "`curl -fsSL https://raw.githubusercontent.com/ChineseMuffin/dotfilesForMac/refs/heads/main/remote-install.sh`"
 
