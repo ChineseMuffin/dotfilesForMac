@@ -3,6 +3,14 @@ macOSを初期設定するためのリポジトリです。
 
 参考にしたリポジトリ https://github.com/webpro/dotfiles/tree/main
 
+## 使い方
+```
+bash -c "`curl -fsSL https://raw.githubusercontent.com/ChineseMuffin/dotfilesForMac/refs/heads/main/remote-install.sh`"
+
+cd ~/.dotfiles
+make
+```
+
 ## App Store
 - 280blocker
 - RunCat
