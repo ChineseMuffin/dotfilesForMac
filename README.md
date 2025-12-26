@@ -24,6 +24,10 @@ make
 - RunCat
 - Xcode
 - Bitwarden
+- Office
+    - Excel
+    - Word
+    - PowerPoint
 
 ## Homebrew
 ### Formulae
@@ -50,10 +54,6 @@ make
 - ワコムタブレットユーティリティ
 - Docker
 - OneDrive
-- Office
-    - Excel
-    - Word
-    - PowerPoint
 
 ## 初期設定
 - Dockの設定
