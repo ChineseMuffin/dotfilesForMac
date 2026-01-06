@@ -37,6 +37,7 @@ rm -rf .dotfiles
 ### Formulae
 - git
 - python
+- zsh-completions
 
 ### Casks
 - gimp
