@@ -17,6 +17,10 @@ bash -c "`curl -fsSL https://raw.githubusercontent.com/ChineseMuffin/dotfilesFor
 
 cd ~/.dotfiles
 make
+
+# cleanup
+cd
+rm -rf .dotfiles
 ```
 
 ## App Store
