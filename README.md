@@ -35,7 +35,6 @@ rm -rf .dotfiles
 
 ## Homebrew
 ### Formulae
-- git
 - python
 - zsh-completions
 
