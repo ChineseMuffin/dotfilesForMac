@@ -1,3 +1,8 @@
-brew "git"
+if OS.mac?
+  brew "mas"
+end
+
+brew "gh"
 brew "python"
+brew "node"
 brew "zsh-completions"
