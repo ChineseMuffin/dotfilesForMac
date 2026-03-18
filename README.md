@@ -28,7 +28,7 @@ rm -rf .dotfiles
 ```
 
 ## App Store
-- 280blocker
+### Mac (mas経由インストール)
 - RunCat
 - Xcode
 - Bitwarden
@@ -37,6 +37,9 @@ rm -rf .dotfiles
     - Excel
     - Word
     - PowerPoint
+
+### iPhone (手動インストール)
+- 280blocker
 
 ## Homebrew
 ### Formulae
