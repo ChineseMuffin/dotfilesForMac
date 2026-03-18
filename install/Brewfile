@@ -1,2 +1,5 @@
+brew "mas"
+brew "gh"
 brew "python"
+brew "node"
 brew "zsh-completions"

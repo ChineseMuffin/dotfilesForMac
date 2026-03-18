@@ -4,11 +4,15 @@ macOSを初期設定するためのリポジトリです。
 参考にしたリポジトリ https://github.com/webpro/dotfiles/tree/main
 
 ## 使い方
+
+### Apple Diagnosticsを実行
+
+https://support.apple.com/ja-jp/102550
+
 ### Xcode Command Line Toolsのインストール
 (git makeを含む)
 ```
-sudo softwareupdate -i -a
-xcode-select --install
+git --version
 ```
 
 ### リポジトリのクローン
@@ -28,6 +32,7 @@ rm -rf .dotfiles
 - RunCat
 - Xcode
 - Bitwarden
+- OneDrive
 - Office
     - Excel
     - Word
@@ -35,8 +40,11 @@ rm -rf .dotfiles
 
 ## Homebrew
 ### Formulae
-- python
 - zsh-completions
+- mas
+- gh
+- python
+- node
 
 ### Casks
 - gimp
@@ -56,8 +64,8 @@ rm -rf .dotfiles
 ## 直接インストール
 - CLIP STUDIO
 - ワコムタブレットユーティリティ
+    - CTL-6100WL
 - Docker
-- OneDrive
 
 ## 初期設定
 - Dockの設定
@@ -69,6 +77,16 @@ rm -rf .dotfiles
     - Google
     - ロシア語
 - Git
-    - name
-    - mail
-    - GitHub private key
+    - user.name
+    - user.email
+        - GitHub用の公開アドレス
+            - https://github.com/settings/emails
+    - gpg.format=ssh
+    - user.signingkey=SSHパブリックキーのパス
+    - commit.gpgsign=true
+- GitHub private keyを登録
+    - `gh ssh-key add`
+
+## ターミナル
+- Icebergをインポート
+- .zshrc移植
