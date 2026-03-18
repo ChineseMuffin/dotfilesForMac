@@ -18,6 +18,23 @@ brew:
 brew-formulae: brew
 	brew bundle --verbose --file install/Brewfile
 
+# `mas` (Mac App Store) is macOS-only and should not run on Ubuntu or in CI.
+# GitHub Actions sets CI=true, so we treat that as a signal to skip.
+.PHONY: brew-mas
+ifeq ($(OS),macos)
+ifneq ($(CI),)
+brew-mas: brew-formulae
+	@echo "Skipping brew-mas in CI environment"
+else
+brew-mas: brew-formulae
+	@echo "Running brew-mas (macOS only)"
+	brew bundle --verbose --file install/Masfile
+endif
+else
+brew-mas: brew-formulae
+	@echo "Skipping brew-mas on $(OS)"
+endif
+
 brew-cask: brew
 	brew bundle --verbose --file install/Caskfile
 
