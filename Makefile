@@ -1,11 +1,15 @@
 DOTFILES_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
-HOME_BREW_PREFIX := /home/linuxbrew/.linuxbrew
-PATH := $(HOME_BREW_PREFIX)/bin:$(DOTFILES_DIR)/bin:$(PATH)
 OS := $(shell bin/is-supported bin/is-macos macos $(shell bin/is-supported bin/is-ubuntu ubuntu linux))
+ifeq ($(OS),macos)
+HOME_BREW_PREFIX := /opt/homebrew
+else
+HOME_BREW_PREFIX := /home/linuxbrew/.linuxbrew
+endif
+PATH := $(HOME_BREW_PREFIX)/bin:$(DOTFILES_DIR)/bin:$(PATH)
 
 all: $(OS)
 
-macos: brew-formulae brew-cask vscode
+macos: brew-formulae brew-cask brew-mas vscode
 
 ubuntu: brew-formulae
 
